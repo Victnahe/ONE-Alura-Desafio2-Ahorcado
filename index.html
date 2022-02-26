@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body onload="ocultarAreaJuego()">
+  <main>
+    <div id="principal">
+      <div style="text-align:center; margin: 50px 0px;">
+        <h1 class="titulo">Ahorcado</h1>
+        <button class="btn" id="iniciar-juego" type="button">INICIAR JUEGO</button>
+      </div>
+      <div style="text-align:center">
+        <form action="">
+          <label for="nueva-palabra">Ingrese una nueva palabra, sin acentos</label>
+          <input type="text" id="nueva-palabra" class="text-input" required title="Solo MAYUSCULAS sin acento" style="text-transform: uppercase;" />
+          <input type="submit" id="btn-nueva-palabra" class="btn" value="AGREGAR PALABRA" />
+          
+        </form>
+      </div>
+    </div>
+
+    <div class="gis" id="area-juego" style="text-align:center;">
+      <div id="encabezadoJuego">
+        <h1>Juego del Ahorcado</h1>
+        <h3>Adivina la palabra pulsando una letra...</h3>
+      </div>
+      <canvas id="canvas-juego" height="800px" width="1200px"></canvas>
+      <div id="palabraAhorcado" style="text-align:center;"></div>
+      <div id="emoji" style="text-align:center;"></div>
+      <div id="avisos" style="text-align:left;">
+        <span id="aviso"></span><br>
+        <p id="p1">Estas letras no son: </p>
+        <span id="estasnoson"></span><br>
+        <p id="p2">Intentos por salvarte!: </p>
+        <span id="intentos"></span><br>
+      </div>
+      <div id="reiniciar">
+        <button id="btn-reiniciar" type="button">REINICIAR</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="contacto" style="text-align:center;">
+    <a href="https://www.linkedin.com/in/victorjnahecheverria/" target="blank"> <b> Víctor Nah Echeverría </b></a><br>
+    <p > Versión solo para escritorio </p>
+  </footer>
+
+  <script type="text/javascript" src="menu.js"></script>
+  <script type="text/javascript" src="ahorcado.js"></script>
+  <script type="text/javascript" src="canvas.js"></script>
+  <script type="text/javascript" src="localPalabras.js"></script>
+</body>
+
+</html>
